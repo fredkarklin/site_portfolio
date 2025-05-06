@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Frederico Karklin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Frederico Karklin</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#experiencias">Experiências</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção de Contato -->
+  <section id="contato" class="section">
+    <div class="container">
+      <h2>Entre em contato</h2>
+      <form id="contato-form">
+        <input type="text" placeholder="Frederico Karklin" required />
+        <input type="email" placeholder="fredkarklin@gmail.com" required />
+        <textarea placeholder="Love Lis Maria" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Seção Sobre Mim -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <h2>Sobre mim</h2>
+      <p>Sou um cientista de dados apaixonado por transformar dados em decisões estratégicas...</p>
+    </div>
+  </section>
+
+  <!-- Linha do Tempo de Experiências -->
+  <section id="experiencias" class="section">
+    <div class="container">
+      <h2>Experiências</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="date">2024</span>
+          <p><strong>Empresa X:</strong> Cientista de Dados Júnior</p>
+        </div>
+        <div class="timeline-item">
+          <span class="date">2023</span>
+          <p><strong>Projeto Y:</strong> Análise de dados com Python</p>
+        </div>
+        <!-- Adicione mais aqui -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrossel de Projetos -->
+  <section id="projetos" class="section">
+    <div class="container">
+      <h2>Meus Projetos</h2>
+      <div class="carousel">
+        <div class="carousel-item active">
+          <img src="img/projeto1.png" alt="Projeto 1" />
+          <p>Dashboard em Power BI sobre vendas</p>
+        </div>
+        <div class="carousel-item">
+          <img src="img/projeto2.png" alt="Projeto 2" />
+          <p>Modelo preditivo com Python</p>
+        </div>
+        <!-- Adicione mais projetos aqui -->
+        <button class="carousel-prev">&#10094;</button>
+        <button class="carousel-next">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
