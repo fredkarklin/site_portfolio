@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frederico Karklin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -23,24 +24,36 @@
     </div>
   </header>
 
-  <!-- Seção de Contato -->
-  <section id="contato" class="section">
-    <div class="container">
-      <h2>Entre em contato</h2>
-      <form id="contato-form">
-        <input type="text" placeholder="Your name" required />
-        <input type="email" placeholder="E-mail" required />
-        <textarea placeholder="Enter your message" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+    <!-- Seção Hero -->
+  <section class="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h1>Frederico Karklin</h1>
+      <h2>Análise e Ciência de Dados</h2>
+      <p>Universidade Tecnológica Federal do Paraná</p>
+      <div class="social-icons">
+        <a href="mailto:fredkarklin@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/fredericokarklin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/fredkarklin" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.kaggle.com/fredkarklin" target="_blank" aria-label="Kaggle"><i class="fab fa-kaggle"></i></a>
+      </div>
     </div>
   </section>
 
   <!-- Seção Sobre Mim -->
-  <section id="sobre" class="section">
+<section id="sobre" class="section">
     <div class="container">
-      <h2>Sobre mim</h2>
-      <p>Sou um cientista de dados apaixonado por transformar dados em decisões estratégicas...</p>
+      <h2 class="text-center">Sobre mim</h2>
+      <div class="text-center mb-4">
+        <img src="img\fredkarklin.png" alt="Frederico Karklin" class="rounded-circle mx-auto d-block" width="240" height="240">
+      </div>
+      <p class="text-center">
+        Sou Frederico Karklin, engenheiro mecânico com MBA em Gestão de Projetos e cientista de dados em formação avançada. Após oito anos atuando com melhoria contínua e resolução de problemas em processos industriais, liderando iniciativas orientadas por dados, realizei minha transição para a área de Ciência de Dados.
+        <br><br>
+        Atualmente, curso Mestrado em Computação Aplicada na UTFPR, com foco em machine learning e aplicações práticas de inteligência artificial. Tenho experiência no desenvolvimento de soluções analíticas completas, incluindo Análises Exploratórias de Dados, etc etc
+        <br><br>
+        Minha experiência anterior em tomada de decisão estratégica baseada em dados complementa minha atual expertise técnica, permitindo-me não apenas desenvolver modelos estatísticos robustos, mas também comunicar efetivamente seus resultados e impactos para stakeholders não-técnicos.
+      </p>
     </div>
   </section>
 
@@ -114,7 +127,12 @@
       </div>
     </div>
   </section>
-
+  <section class="portfolio-button-section">
+    <div class="container">
+      <a href="portfolio.html" class="portfolio-btn">Go to portfolio</a>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
