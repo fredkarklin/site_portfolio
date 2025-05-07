@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio | Frederico Karklin</title>
+  <title>Frederico Karklin</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -28,9 +28,9 @@
     <div class="container">
       <h2>Entre em contato</h2>
       <form id="contato-form">
-        <input type="text" placeholder="Frederico Karklin" required />
-        <input type="email" placeholder="fredkarklin@gmail.com" required />
-        <textarea placeholder="Love Lis Maria" required></textarea>
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="E-mail" required />
+        <textarea placeholder="Enter your message" required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </div>
@@ -49,15 +49,48 @@
     <div class="container">
       <h2>Experiências</h2>
       <div class="timeline">
-        <div class="timeline-item">
-          <span class="date">2024</span>
-          <p><strong>Empresa X:</strong> Cientista de Dados Júnior</p>
+        <!-- A linha vertical central -->
+        <div class="timeline-line"></div>
+        
+        <!-- Item à direita -->
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <span class="date">2024</span>
+            <h3>Cientista de Dados Júnior</h3>
+            <p><strong>Empresa X</strong></p>
+            <p>Desenvolvimento de modelos preditivos e análise de dados de vendas utilizando Python, SQL e Power BI.</p>
+          </div>
         </div>
-        <div class="timeline-item">
-          <span class="date">2023</span>
-          <p><strong>Projeto Y:</strong> Análise de dados com Python</p>
+        
+        <!-- Item à esquerda -->
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="date">2023</span>
+            <h3>Análise de dados com Python</h3>
+            <p><strong>Projeto Y</strong></p>
+            <p>Análise exploratória de grandes volumes de dados e criação de visualizações interativas com Matplotlib e Plotly.</p>
+          </div>
         </div>
-        <!-- Adicione mais aqui -->
+        
+        <!-- Item à direita -->
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <span class="date">2022</span>
+            <h3>Estágio em Business Intelligence</h3>
+            <p><strong>Empresa Z</strong></p>
+            <p>Desenvolvimento de dashboards e relatórios para suporte à tomada de decisão.</p>
+          </div>
+        </div>
+        
+        <!-- Item à esquerda -->
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <span class="date">2021</span>
+            <h3>Projeto Acadêmico</h3>
+            <p><strong>Universidade</strong></p>
+            <p>Análise estatística de dados de pesquisa de mercado utilizando R.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
