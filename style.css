@@ -170,10 +170,58 @@
     transform: translateY(-5px);
   }
 
-  /* Sobre mim */
+  /* Seção Sobre */
+#sobre {
+    padding: 80px 0; /* Espaçamento vertical */
+    color: #f0f6fc; /* Cor do texto, combinando com o fundo da Hero */
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px; /* Largura máxima, ajusta se quiser */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Espaçamento lateral */
+  }
+  
+  /* Centraliza texto */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Margem inferior (substitui mb-4 do Bootstrap) */
+  .mb-4 {
+    margin-bottom: 1.5rem; /* 24px, equivalente ao mb-4 */
+  }
+  
+  /* Imagem */
+  .rounded-circle {
+    border-radius: 50%; /* Mantém a imagem circular */
+  }
+  
+  /* Centraliza imagem block */
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .d-block {
+    display: block;
+  }
+  
+  /* Estiliza o h2 */
+  #sobre h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #3498db; /* Ajusta pro teu tema */
+  }
+  
+  /* Estiliza o p */
   #sobre p {
-    max-width: 800px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px; /* Limita a largura do texto pra legibilidade */
+    margin: 0 auto; /* Centraliza o parágrafo */
   }
   
   /* Timeline */
@@ -227,11 +275,11 @@
   }
 
   .timeline-content h3 {
-    color: #333;
+    color: #58a6ff;
   }
 
   .timeline-content p {
-    color: #555;
+    color: #58a6ff;
   }
   
   /* Círculos nos pontos de conexão com a linha central */
@@ -366,4 +414,23 @@
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
+
+  @media (max-width: 768px) {
+    #sobre {
+      padding: 40px 0; /* Menos padding no mobile */
+    }
   
+    #sobre h2 {
+      font-size: 2rem; /* Título menor */
+    }
+  
+    #sobre p {
+      font-size: 1rem; /* Texto menor */
+      padding: 0 15px; /* Mais margem lateral */
+    }
+  
+    .rounded-circle {
+      width: 180px !important; /* Imagem menor */
+      height: 180px !important;
+    }
+  }
