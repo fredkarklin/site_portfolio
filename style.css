@@ -268,18 +268,18 @@
   /* Conteúdo dos itens */
   .timeline-content {
     padding: 20px;
-    background-color: white;
+    background-color: #d8e0e6;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
   }
 
   .timeline-content h3 {
-    color: #58a6ff;
+    color: #050505;
   }
 
   .timeline-content p {
-    color: #58a6ff;
+    color: #050505;
   }
   
   /* Círculos nos pontos de conexão com a linha central */
