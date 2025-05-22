@@ -223,7 +223,96 @@
     max-width: 800px; /* Limita a largura do texto pra legibilidade */
     margin: 0 auto; /* Centraliza o parágrafo */
   }
+   
+  /* Seção Skills */
+  .skills-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
   
+  .skills-item {
+    flex: 1;
+    background-color: #161b22; /* Fundo escuro, igual à navbar */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #30363d; /* Borda sutil pra combinar com o tema */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skills-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skills-item h3 {
+    font-size: 1.5rem;
+    color: #58a6ff; /* Cor de destaque do teu tema */
+    margin-bottom: 1rem;
+  }
+  
+  .skills-icon {
+    width: 40px; /* Define a largura da imagem */
+    height: 40px; /* Define a altura da imagem */
+  }
+
+  .resume-icon {
+    width: 120px; /* Define a largura da imagem */
+    height: 120px; /* Define a altura da imagem */
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skills-item p {
+    font-size: 1rem;
+    color: #c9d1d9; /* Cor do texto principal */
+    line-height: 1.8;
+  }
+  
+  .resume-link {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+  }
+  
+  .resume-link:hover {
+    border-bottom: 1px solid #58a6ff;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .skills-grid {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .skills-item {
+      padding: 1.5rem;
+    }
+  
+    .skills-item h3 {
+      font-size: 1.3rem;
+    }
+  
+    .skills-item p {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Grupo de ícones */
+  .icon-group {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    gap: 1rem; /* Espaçamento entre os ícones */
+    margin-bottom: 1rem; /* Espaçamento abaixo do grupo de ícones */
+  }
+
   /* Timeline */
   .timeline {
     position: relative;
