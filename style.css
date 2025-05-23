@@ -171,7 +171,7 @@
   }
 
   /* Seção Sobre */
-#sobre {
+  .sobre {
     padding: 80px 0; /* Espaçamento vertical */
     color: #f0f6fc; /* Cor do texto, combinando com o fundo da Hero */
   }
@@ -209,7 +209,7 @@
   }
   
   /* Estiliza o h2 */
-  #sobre h2 {
+  .sobre h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 2rem;
@@ -217,9 +217,9 @@
   }
   
   /* Estiliza o p */
-  #sobre p {
+  .sobre p {
     font-size: 1.2rem;
-    line-height: 1.8;
+    line-height: 1.6;
     max-width: 800px; /* Limita a largura do texto pra legibilidade */
     margin: 0 auto; /* Centraliza o parágrafo */
   }
@@ -347,6 +347,7 @@
     left: 0;
     text-align: right;
   }
+
   
   /* Estilo para itens à direita */
   .timeline-item.right {
@@ -360,6 +361,7 @@
     background-color: #d8e0e6;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
     position: relative;
   }
 
@@ -369,6 +371,14 @@
 
   .timeline-content p {
     color: #050505;
+  }
+
+  /*timeline content hover */
+
+  .timeline-content:hover {
+    background-color: #a6ceff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
   
   /* Círculos nos pontos de conexão com a linha central */
@@ -437,6 +447,10 @@
     overflow: hidden;
     align-items: center;
     justify-content: center;
+    width: 100%; /* Garante que o carrossel ocupe a largura do container */
+    max-width: 500px; /* Define uma largura máxima para o carrossel (ajuste conforme o design) */
+    margin: 0 auto; /* Centraliza o carrossel */
+    height: 400px; /* Altura fixa para o carrossel (ajuste conforme necessário) */
   }
   
   .carousel-item {
@@ -445,14 +459,20 @@
     flex-shrink: 0;
     flex-grow: 1;
     width: 100%;
+    height: 100%; /* Faz o item ocupar toda a altura do carrossel */
   }
   
   .carousel-item.active {
-    display: block;
+    display: flex; /* Muda para flex para alinhar imagem e texto */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .carousel-item img {
-    max-width: 100%;
+    width: 100%; /* Faz a imagem ocupar a largura do container */
+    height: 300px; /* Altura fixa para todas as imagens (ajuste conforme necessário) */
+    object-fit: cover; /* Faz a imagem cobrir o espaço, cortando se necessário */
     border-radius: 10px;
     margin-bottom: 1rem;
   }
@@ -472,11 +492,27 @@
   }
   
   .carousel-prev {
-    left: 0;
+    left: 10px; /* Ajuste para não grudar na borda */
   }
   
   .carousel-next {
-    right: 0;
+    right: 10px; /* Ajuste para não grudar na borda */
+  }
+
+  /* Estilo para o link do carrossel*/
+  
+
+  /* Opcional: Efeito hover para indicar que é clicável */
+  .carousel-link:hover .carousel-item img {
+    opacity: 0.7; /* Leve escurecimento na imagem ao passar o mouse */
+    transition: opacity 0.19s ease; /* Transição suave */
+  }
+
+  /* Estiliza h2 do carrossel*/
+  .carousel-link p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #8bbada; /* Ajusta pro teu tema */
   }
 
   /* Estilo do botão de portfolio */
@@ -523,3 +559,121 @@
       height: 180px !important;
     }
   }
+
+  /* Footer (ajuste conforme teu site) */
+  .footer {
+    background-color: var(--bg-dark);
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer p {
+    color: #383838;
+  }
+
+  /* Seção de Projetos */
+  .section-proj {
+    padding: 4rem 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-light);
+  }
+
+  /* Grid de Cards */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .project-card {
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 1px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 1.8rem;
+    color: #333;
+  }
+
+  .card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #505050;
+  }
+
+  .read-more {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--accent-blue);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+
+  .read-more:hover {
+    color: #1f6feb;
+  }
+
+  /* Responsividade */
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .nav-links {
+      gap: 1rem;
+    }
+
+    .nav-links li a {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .navbar .container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-card img {
+      height: 150px;
+    }
+  }
+    
