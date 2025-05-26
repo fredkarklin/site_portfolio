@@ -677,3 +677,42 @@
     }
   }
     
+  /* Filtro de Tags */
+  .filter-tags {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    background-color: #161b22;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .filter-btn:hover {
+    background-color: #30363d;
+    color: #58a6ff;
+  }
+
+  .filter-btn.active {
+    background-color: #58a6ff;
+    color: white;
+    border-color: #58a6ff;
+  }
+
+  /* Efeito de fade nos cards ao filtrar */
+  .project-card {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .project-card.hidden {
+    display: none;
+  }
