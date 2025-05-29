@@ -43,6 +43,10 @@
     font-weight: bold;
     color: #58a6ff;
   }
+
+  .logo:hover{
+    color: #58a6ff;
+  }
   
   .nav-links {
     list-style: none;
@@ -584,6 +588,10 @@
     color: var(--text-light);
   }
 
+  .section-proj h1 {
+    color: #3498db;
+  }
+
   /* Grid de Cards */
   .projects-grid {
     display: grid;
@@ -677,37 +685,47 @@
     }
   }
     
-  /* Filtro de Tags */
+  /* Filtro de Tags (Dropdown) */
   .filter-tags {
     text-align: center;
     margin-bottom: 2rem;
   }
 
-  .filter-btn {
+  .filter-dropdown {
     background-color: #161b22;
     color: #c9d1d9;
     border: 1px solid #30363d;
     padding: 0.5rem 1rem;
-    margin: 0.2rem;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 0.9rem;
     text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none; /* Remove o estilo padrão do dropdown */
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23c9d1d9" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Adiciona uma setinha customizada */
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1rem;
+    padding-right: 2rem; /* Espaço pra setinha */
     transition: all 0.3s ease;
   }
 
-  .filter-btn:hover {
-    background-color: #30363d;
+  .filter-dropdown:hover,
+  .filter-dropdown:focus {
+    border-color: #58a6ff;
     color: #58a6ff;
   }
 
-  .filter-btn.active {
-    background-color: #58a6ff;
-    color: white;
-    border-color: #58a6ff;
+  .filter-label {
+    display: block;
+    color: #c9d1d9;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
 
-  /* Efeito de fade nos cards ao filtrar */
+  /* Efeito de fade nos cards ao filtrar (mantido) */
   .project-card {
     opacity: 1;
     transition: opacity 0.3s ease;
@@ -715,4 +733,89 @@
 
   .project-card.hidden {
     display: none;
+  }
+
+  /* Seção do Botão de Voltar */
+  .back-button-section {
+    padding: 1rem 0;
+    background-color: #ffffff; /* Fundo branco pra combinar com o tema de folha de papel */
+  }
+
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffffff; /* Azul do teu tema */
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .back-btn i {
+    margin-right: 0.5rem; /* Espaço entre o ícone e o texto */
+  }
+
+  .back-btn:hover {
+    background-color: #58a6ff; /* Verde do hover, igual ao botão de portfolio */
+    color: #ffffff;
+    transform: translateY(-1.5px);
+  }
+
+  /* Seção do Projeto */
+  .project-detail-section {
+    padding: 2rem 0;
+    background-color: #ffffff; /* Fundo branco pra parecer uma folha de papel */
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333; /* Texto escuro pra contrastar com o fundo branco */
+  }
+
+  .project-content {
+    max-width: 1200px; /* Limita a largura pra legibilidade */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    color: #333; /* Texto escuro pra contrastar com o fundo branco */
+  }
+
+  .project-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  /* Linha separadora */
+  .separator-line {
+    width: 100%; /* Define a largura da linha (ajuste se quiser mais larga ou estreita) */
+    margin: 2rem auto; /* Centraliza horizontalmente */
+    border: 0; /* Remove a borda padrão do <hr> */
+    border-top: 1px solid #808080; /* Linha fininha cinza médio */
+  }
+
+  .separator-line p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #505050;
+  }
+
+  /* Imagem do projeto */
+  .project-image {
+    display: block; /* Garante que a imagem seja um bloco pra centralizar */
+    width: 100%; /* Mesmo width da linha separadora */
+
+    margin: 1rem auto; /* Centraliza horizontalmente e adiciona margem vertical */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil pra dar profundidade */
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .separator-line,
+    .project-image {
+      width: 90%; /* Aumenta um pouco a largura em telas menores */
+    }
   }

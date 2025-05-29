@@ -29,24 +29,27 @@
     <div class="container">
       <h1 class="section-title">My Projects</h1>
       
-      <!-- Filtro de Tags -->
+      <!-- Filtro de Tags (Dropdown) -->
       <div class="filter-tags">
-        <button class="filter-btn active" data-tag="all">All</button>
-        <button class="filter-btn" data-tag="Power BI">Power BI</button>
-        <button class="filter-btn" data-tag="Machine Learning">Machine Learning</button>
-        <button class="filter-btn" data-tag="React">React</button>
-        <button class="filter-btn" data-tag="Selenium">Selenium</button>
-        <!-- Adicione mais tags conforme necessário -->
+        <label for="filter-dropdown" class="filter-label">Filtrar projetos:</label>
+        <select id="filter-dropdown" class="filter-dropdown" aria-label="Filter projects by category">
+          <option value="all" selected>All</option>
+          <option value="Power BI">Power BI</option>
+          <option value="Machine Learning">Machine Learning</option>
+          <option value="React">React</option>
+          <option value="Selenium">Selenium</option>
+          <!-- Adicione mais opções conforme necessário -->
+        </select>
       </div>
 
       <div class="projects-grid">
         <!-- Card 1 -->
         <div class="project-card" data-tags="Power BI,Data Visualization">
-          <img src="img/projeto1.png" alt="Projeto 1">
+          <img src="projects/img1.jpg" alt="Projeto 1">
           <div class="card-content">
-            <h3>Dashboard em Power BI</h3>
-            <p>Análise de vendas com visualizações interativas.</p>
-            <a href="/projects/p1" class="read-more">READ MORE</a>
+            <h3>Análise de acidentes de trânsito</h3>
+            <p>EDA do dataset de acidentes de trânsito do Detran em 2024</p>
+            <a href="pp1.html" class="read-more">READ MORE</a>
           </div>
         </div>
         <!-- Card 2 -->
@@ -55,25 +58,25 @@
           <div class="card-content">
             <h3>Modelo Preditivo em Python</h3>
             <p>Previsão de tendências com machine learning.</p>
-            <a href="/projects/p2" class="read-more">READ MORE</a>
+            <a href="/projects/pp2" class="read-more">READ MORE</a>
           </div>
         </div>
         <!-- Card 3 -->
         <div class="project-card" data-tags="React,Web Development">
-          <img src="img/projeto1.png" alt="Projeto 3">
+          <img src="img/projeto3.png" alt="Projeto 3">
           <div class="card-content">
             <h3>Web App com React</h3>
             <p>Aplicação interativa para gestão de tarefas.</p>
-            <a href="/projects/p3" class="read-more">READ MORE</a>
+            <a href="/projects/pp3" class="read-more">READ MORE</a>
           </div>
         </div>
         <!-- Card 4 -->
         <div class="project-card" data-tags="Selenium,Automation">
-          <img src="img/projeto2.png" alt="Projeto 4">
+          <img src="img/projeto4.png" alt="Projeto 4">
           <div class="card-content">
             <h3>Automação com Selenium</h3>
             <p>Script para coleta de dados online.</p>
-            <a href="/projects/p4" class="read-more">READ MORE</a>
+            <a href="/projects/pp4" class="read-more">READ MORE</a>
           </div>
         </div>
       </div>
