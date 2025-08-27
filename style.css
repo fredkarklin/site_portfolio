@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #0d1117;
+    background-color: #17100d;
     color: #f0f6fc;
     line-height: 1.6;
   }
@@ -42,6 +42,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: #58a6ff;
+    text-decoration: none;
   }
 
   .logo:hover{
@@ -111,7 +112,7 @@
 .hero {
     position: relative;
     height: 100vh;
-    background: #0e1117; /* Fundo escuro */
+    background: #17130e; /* Fundo escuro */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -465,6 +466,7 @@
     width: 100%;
     height: 100%; /* Faz o item ocupar toda a altura do carrossel */
   }
+
   
   .carousel-item.active {
     display: flex; /* Muda para flex para alinhar imagem e texto */
@@ -504,7 +506,9 @@
   }
 
   /* Estilo para o link do carrossel*/
-  
+  .carousel-link {
+    text-decoration: none; /* Remove o sublinhado */
+  }
 
   /* Opcional: Efeito hover para indicar que é clicável */
   .carousel-link:hover .carousel-item img {
@@ -514,6 +518,7 @@
 
   /* Estiliza h2 do carrossel*/
   .carousel-link p {
+    text-decoration: none; /* Só pra garantir */
     font-size: 1.5rem;
     font-weight: 700;
     color: #8bbada; /* Ajusta pro teu tema */
@@ -818,4 +823,140 @@
     .project-image {
       width: 90%; /* Aumenta um pouco a largura em telas menores */
     }
+  }
+
+  /* Seção de Contato */
+  .contact-section {
+    padding: 4rem 0; /* Já herda da .section, mas reforçando */
+    background-color: #0d1117; /* Fundo escuro, igual ao body */
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #58a6ff; /* Título em azul, igual aos outros h2 */
+  }
+
+  .contact-form {
+    max-width: 600px; /* Limita a largura do formulário */
+    margin: 0 auto; /* Centraliza */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Igual ao #contato form */
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #f0f6fc; /* Texto claro, igual ao tema */
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #30363d; /* Borda escura, igual ao #contato input */
+    background-color: #0d1117; /* Fundo escuro, igual ao #contato input */
+    color: #f0f6fc; /* Texto claro, igual ao #contato input */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #58a6ff; /* Azul do tema ao focar */
+  }
+
+  .form-group textarea {
+    resize: vertical; /* Permite redimensionar só na vertical */
+  }
+
+  .submit-btn {
+    padding: 0.75rem;
+    background-color: #238636; /* Verde escuro, igual ao #contato button */
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #2ea043; /* Verde mais claro no hover, igual ao #contato button */
+    transform: translateY(-3px);
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .contact-section h2 {
+      font-size: 1.5rem;
+    }
+
+    .contact-form {
+      padding: 0 1rem;
+    }
+
+    .form-group label {
+      font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      font-size: 0.9rem;
+    }
+
+    .submit-btn {
+      font-size: 0.9rem;
+    }
+  }
+
+
+  /* Navbar */
+  .navbar-proj {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #ececec;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-proj .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-proj {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f1f1f;
+    text-decoration: none;
+  }
+
+  .logo-proj:hover{
+    color: #1f1f1f;
+  }
+  
+  .nav-links-proj {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links-proj a {
+    color: #1f1f1f;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
