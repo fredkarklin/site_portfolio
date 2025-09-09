@@ -519,7 +519,7 @@
   /* Estiliza h2 do carrossel*/
   .carousel-link p {
     text-decoration: none; /* Só pra garantir */
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #8bbada; /* Ajusta pro teu tema */
   }
